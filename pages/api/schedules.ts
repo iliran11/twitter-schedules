@@ -15,6 +15,7 @@ export default async (req, res) => {
     res.json({ data: result });
   } catch (e) {
     res.statusCode = 500;
+    console.log(e);
     res.json({ error: e.message });
   }
 };
