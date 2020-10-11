@@ -6,12 +6,12 @@ const twitterClient = new TwitterClient({
   accessToken: process.env.TWITTER_ACCESS_TOKEN,
   accessTokenSecret: process.env.TWITTER_ACCESS_TOKEN_SECRET,
   ttl: 10800, // 3 hours
-  disableCache: Boolean(process.env.TWITTER_CLIENT_CACHE), // Disables the caching behavior. Defaults to 'false'
+  disableCache: process.env.NODE_ENV !== "production",
 });
 
-export const fetchTweetsByUser = async () => {
+export const fetchTweetsByUser = async (persona: string) => {
   const result = await twitterClient.tweets.statusesUserTimeline({
-    screen_name: "laptopCouch",
+    screen_name: persona,
     exclude_replies: true,
   });
   return result;
