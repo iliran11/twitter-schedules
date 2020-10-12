@@ -1,4 +1,4 @@
-import { getRangeHours } from "./dates";
+import { closestNumber, getRangeHours, initializeScheduleMap } from "./dates";
 
 describe("getRangeHours with increment of 2", () => {
   const hoursRange = getRangeHours(2);
@@ -40,7 +40,6 @@ describe("getRangeHours with increment of 3", () => {
 });
 describe("getRangeHours with increment of 5", () => {
   const hoursRange = getRangeHours(5);
-  console.log(hoursRange);
   test("There are 4 slots of ranges", () => {
     expect(hoursRange).toHaveLength(5);
   });
@@ -56,5 +55,38 @@ describe("getRangeHours with increment of 5", () => {
     const lastIndex = hoursRange.length - 1;
     expect(hoursRange[lastIndex][0]).toBe(20);
     expect(hoursRange[lastIndex][1]).toBe(25);
+  });
+});
+
+describe("closest number", () => {
+  test("number 9 with 5 as devider", () => {
+    const result = closestNumber(9, 5);
+    expect(result).toBe(10);
+  });
+  test("number 6 with 2 as devider", () => {
+    const result = closestNumber(6, 2);
+    expect(result).toBe(6);
+  });
+  test("number 7 with 2 as devider", () => {
+    const result = closestNumber(6, 2);
+    expect(result).toBe(6);
+  });
+  test("number 11 with 3 as devider", () => {
+    const result = closestNumber(11, 3);
+    expect(result).toBe(12);
+  });
+  test("number 20 with 2 as devider", () => {
+    const result = closestNumber(20, 2);
+    expect(result).toBe(20);
+  });
+});
+
+describe("Initilize schedule with increment ", () => {
+  const schedule = initializeScheduleMap(2);
+  test("It has 12 slots", () => {
+    expect(Object.keys(schedule)).toHaveLength(12);
+  });
+  test("has hour 0 property", () => {
+    expect(schedule).toHaveProperty("0");
   });
 });
