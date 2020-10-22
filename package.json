@@ -9,10 +9,16 @@
     "storybook": "start-storybook -p 6006"
   },
   "dependencies": {
+    "bootstrap": "^4.5.3",
+    "css-loader": "^5.0.0",
     "lodash.inrange": "^3.3.6",
     "next": "9.5.4",
     "react": "16.13.1",
+    "react-bootstrap": "^1.4.0",
     "react-dom": "16.13.1",
+    "sass": "^1.27.0",
+    "sass-loader": "^10.0.4",
+    "style-loader": "^2.0.0",
     "twitter-api-client": "^1.0.4"
   },
   "devDependencies": {
