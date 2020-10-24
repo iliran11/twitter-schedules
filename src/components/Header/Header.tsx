@@ -1,23 +1,42 @@
 import Navbar from "react-bootstrap/Navbar";
-import Nav from "react-bootstrap/Nav";
-import Form from "react-bootstrap/Form";
-import FormControl from "react-bootstrap/FormControl";
 import Button from "react-bootstrap/Button";
+import Github from "./github-logo.svg";
 
 const Header = () => {
-//   return <div>hi</div>;
   return (
-    <Navbar bg="primary" variant="dark">
-      <Navbar.Brand href="#home">Navbar</Navbar.Brand>
-      <Nav className="mr-auto">
-        <Nav.Link href="#home">Home</Nav.Link>
-        <Nav.Link href="#features">Features</Nav.Link>
-        <Nav.Link href="#pricing">Pricing</Nav.Link>
-      </Nav>
-      <Form inline>
-        <FormControl type="text" placeholder="Search" className="mr-sm-2" />
-        <Button variant="outline-light">Search</Button>
-      </Form>
+    <Navbar bg="light" expand="lg">
+      <Navbar.Brand href="#home">When they tweet?</Navbar.Brand>
+      <Navbar.Toggle aria-controls="basic-navbar-nav" />
+      <Navbar.Collapse id="basic-navbar-nav">
+        <Button>
+          <div className="social-content">
+            <div className="icon-container">
+              <Github />
+            </div>
+            Twitter
+          </div>
+        </Button>
+      </Navbar.Collapse>
+      <style jsx>
+        {`
+          .social-content {
+            display: flex;
+            align-items: center;
+          }
+          .icon-container {
+            height: 20px;
+            width: 20px;
+            display: flex;
+          }
+          .icon-container :global(svg) {
+            width: 100%;
+            height: 100%;
+          }
+          .icon-home3:before {
+            content: "\e902";
+          }
+        `}
+      </style>
     </Navbar>
   );
 };
