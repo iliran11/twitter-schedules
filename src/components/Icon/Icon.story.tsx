@@ -23,5 +23,11 @@ export const Icons = () => (
     <IconWrap>
       <Icon.GithubIcon size={80} />
     </IconWrap>
+    <IconWrap>
+      <Icon.TwitterIcon size={80} />
+    </IconWrap>
+    <IconWrap>
+      <Icon.TwitterIcon size={80} />
+    </IconWrap>
   </>
 );

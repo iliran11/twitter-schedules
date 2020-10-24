@@ -1,6 +1,6 @@
 import Navbar from "react-bootstrap/Navbar";
 import Button from "react-bootstrap/Button";
-import Icon from "../Icon/Icon";
+import SocialLink from "./SocialLink";
 
 const Header = () => {
   return (
@@ -8,12 +8,8 @@ const Header = () => {
       <Navbar.Brand>When they tweet?</Navbar.Brand>
       <Navbar.Toggle />
       <Navbar.Collapse>
-        <Button>
-          <div className="social-content">
-            <Icon.GithubIcon size={20} />
-            <span>Twitter</span>
-          </div>
-        </Button>
+        <SocialLink platform="github" />
+        <SocialLink platform="twitter" />
       </Navbar.Collapse>
       <style jsx>
         {`

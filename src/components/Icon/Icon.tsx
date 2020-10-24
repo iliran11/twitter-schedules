@@ -1,6 +1,7 @@
 import { maxHeaderSize } from "http";
 import React from "react";
 import Github from "./github-logo.svg";
+import Twitter from "./twitter-logo.svg";
 
 interface IconProps {
   size: number;
@@ -29,5 +30,8 @@ const Icon = (props: IconProps & { icon: any }) => {
 const GithubIcon = (props: IconProps) => (
   <Icon icon={Github} size={props.size} />
 );
+const TwitterIcon = (props: IconProps) => (
+  <Icon icon={Twitter} size={props.size} />
+);
 
-export default { GithubIcon };
+export default { GithubIcon, TwitterIcon };
