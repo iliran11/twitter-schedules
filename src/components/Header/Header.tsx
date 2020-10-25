@@ -5,6 +5,7 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 
 const Header = () => {
+  const socialPlatforms: ("github" | "twitter")[] = ["github", "twitter"];
   return (
     <Navbar bg="light" expand="lg">
       <Container>
@@ -13,16 +14,15 @@ const Header = () => {
         <Navbar.Collapse>
           <div className="main-content">
             <Row>
-              <Col sm={12} lg={6}>
-                <div className="mt-lg-0 mt-1">
-                  <SocialLink platform="github" />
-                </div>
-              </Col>
-              <Col sm={12} lg={6}>
-                <div className="mt-lg-0 mt-1">
-                  <SocialLink platform="twitter" />
-                </div>
-              </Col>
+              {socialPlatforms.map((platform) => (
+                <>
+                  <Col sm={12} lg={6}>
+                    <div className="mt-lg-0 mt-1 social-link-wrapper">
+                      <SocialLink platform={platform} />
+                    </div>
+                  </Col>
+                </>
+              ))}
             </Row>
           </div>
         </Navbar.Collapse>
@@ -30,6 +30,10 @@ const Header = () => {
           {`
             .main-content {
               margin-left: auto;
+            }
+            .social-link-wrapper {
+              display: flex;
+              justify-content: center;
             }
           `}
         </style>
