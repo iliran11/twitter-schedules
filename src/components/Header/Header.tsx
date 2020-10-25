@@ -1,27 +1,39 @@
 import Navbar from "react-bootstrap/Navbar";
-import Button from "react-bootstrap/Button";
 import SocialLink from "./SocialLink";
+import Container from "react-bootstrap/Container";
+import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
 
 const Header = () => {
   return (
     <Navbar bg="light" expand="lg">
-      <Navbar.Brand>When they tweet?</Navbar.Brand>
-      <Navbar.Toggle />
-      <Navbar.Collapse>
-        <SocialLink platform="github" />
-        <SocialLink platform="twitter" />
-      </Navbar.Collapse>
-      <style jsx>
-        {`
-          .social-content {
-            display: flex;
-            align-items: center;
-          }
-          .social-content span {
-            margin-left: 10px;s
-          }
-        `}
-      </style>
+      <Container>
+        <Navbar.Brand>When they tweet?</Navbar.Brand>
+        <Navbar.Toggle />
+        <Navbar.Collapse>
+          <div className="main-content">
+            <Row>
+              <Col sm={12} lg={6}>
+                <div className="mt-lg-0 mt-1">
+                  <SocialLink platform="github" />
+                </div>
+              </Col>
+              <Col sm={12} lg={6}>
+                <div className="mt-lg-0 mt-1">
+                  <SocialLink platform="twitter" />
+                </div>
+              </Col>
+            </Row>
+          </div>
+        </Navbar.Collapse>
+        <style jsx>
+          {`
+            .main-content {
+              margin-left: auto;
+            }
+          `}
+        </style>
+      </Container>
     </Navbar>
   );
 };
