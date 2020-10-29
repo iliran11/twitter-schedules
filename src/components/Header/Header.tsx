@@ -3,6 +3,7 @@ import SocialLink from "./SocialLink";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
+import breakpoints from "../../breakpoints";
 
 const Header = () => {
   const socialPlatforms: ("github" | "twitter")[] = ["github", "twitter"];
@@ -17,7 +18,7 @@ const Header = () => {
               {socialPlatforms.map((platform) => (
                 <>
                   <Col sm={12} lg={6}>
-                    <div className="mt-lg-0 mt-1 social-link-wrapper">
+                    <div className="social-link-wrapper">
                       <SocialLink platform={platform} />
                     </div>
                   </Col>
@@ -34,6 +35,14 @@ const Header = () => {
             .social-link-wrapper {
               display: flex;
               justify-content: center;
+            }
+            .social-link-wrapper:first-child {
+              margin-bottom: 10px;
+            }
+            @media only screen and (min-width: ${breakpoints.large}px) {
+              .social-link-wrapper:first-child {
+                margin-bottom: 10px;
+              }
             }
           `}
         </style>
