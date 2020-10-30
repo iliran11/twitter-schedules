@@ -18,13 +18,11 @@ const Header = () => {
           <div className="main-content">
             <Row>
               {socialPlatforms.map((platform) => (
-                <>
-                  <Col sm={12} lg={6}>
-                    <div className="social-link-wrapper">
-                      <SocialLink platform={platform} />
-                    </div>
-                  </Col>
-                </>
+                <Col sm={12} lg={6} key={platform}>
+                  <div className="social-link-wrapper">
+                    <SocialLink platform={platform} />
+                  </div>
+                </Col>
               ))}
             </Row>
           </div>

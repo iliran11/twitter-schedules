@@ -16,7 +16,7 @@
     "css-loader": "^5.0.0",
     "eslint-plugin-react": "^7.21.5",
     "lodash.inrange": "^3.3.6",
-    "next": "9.5.4",
+    "next": "10.0.0",
     "react": "16.13.1",
     "react-bootstrap": "^1.4.0",
     "react-dom": "16.13.1",
