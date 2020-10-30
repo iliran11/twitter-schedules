@@ -1,5 +1,4 @@
 import Navbar from "react-bootstrap/Navbar";
-import Text from "../Text/Text";
 import SocialLink from "./SocialLink";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
@@ -12,7 +11,7 @@ const Header = () => {
     <Navbar bg="white" expand="lg">
       <Container>
         <Navbar.Brand>
-          <Text weight="bold">When they tweet?</Text>
+          <span className="logo">When they tweet?</span>
         </Navbar.Brand>
         <Navbar.Toggle />
         <Navbar.Collapse>
@@ -41,6 +40,9 @@ const Header = () => {
             }
             .social-link-wrapper:first-child {
               margin-bottom: 10px;
+            }
+            .logo {
+              font-weight: bold;
             }
             @media only screen and (min-width: ${breakpoints.large}px) {
               .social-link-wrapper:first-child {

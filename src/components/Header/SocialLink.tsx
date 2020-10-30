@@ -6,6 +6,7 @@ interface SocialLinkProps {
 }
 const SocialLink = (props: SocialLinkProps) => (
   <a
+    rel="noreferrer"
     target="_blank"
     href={
       props.platform === "github"

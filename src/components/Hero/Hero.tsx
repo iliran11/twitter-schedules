@@ -1,8 +1,7 @@
 import Icon from "../Icon/Icon";
-import Text from "../Text/Text";
 import breakpoints from "../../breakpoints";
 
-const Hero: React.FunctionComponent<{}> = (props) => {
+const Hero: React.FunctionComponent = () => {
   return (
     <div className="hero">
       <div className="icon-container">

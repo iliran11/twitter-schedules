@@ -6,7 +6,7 @@ export default {
   title: "Icon",
 } as Meta;
 
-const IconWrap = (props) => (
+const IconWrap: React.FunctionComponent = (props) => (
   <div>
     {props.children}
     <style jsx>{`

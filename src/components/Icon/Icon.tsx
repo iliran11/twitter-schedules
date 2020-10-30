@@ -1,7 +1,4 @@
-import { maxHeaderSize } from "http";
 import React from "react";
-import { propTypes } from "react-bootstrap/esm/Image";
-import breakpoints from "../../breakpoints";
 import Github from "./github-logo.svg";
 import Twitter from "./twitter-logo.svg";
 import Woman from "./woman.svg";
@@ -9,6 +6,7 @@ import Woman from "./woman.svg";
 interface IconProps {
   size?: number;
 }
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 const Icon = (props: IconProps & { icon: any }) => {
   return (
     <div className={`icon-container ${props.size ? "predefined-size" : ""}`}>

@@ -11,7 +11,7 @@ export const getRangeHours = (hoursIncrement: number) => {
 };
 
 export const initializeScheduleMap = (slotLength: number) => {
-  return getRangeHours(2).reduce((acc, range) => {
+  return getRangeHours(slotLength).reduce((acc, range) => {
     acc[range[0]] = 0;
     return acc;
   }, {});
