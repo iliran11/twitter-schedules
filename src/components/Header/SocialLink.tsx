@@ -5,14 +5,22 @@ interface SocialLinkProps {
   platform: "github" | "twitter";
 }
 const SocialLink = (props: SocialLinkProps) => (
-  <Button>
-    <div className="social-content">
-      {props.platform === "github" && <Icon.GithubIcon size={20} />}
-      {props.platform === "twitter" && <Icon.TwitterIcon size={20} />}
-      <span>{props.platform === "github" ? "Github" : "Twitter"}</span>
-    </div>
-    <style jsx>
-      {`
+  <a
+    target="_blank"
+    href={
+      props.platform === "github"
+        ? "https://github.com/iliran11"
+        : "https://twitter.com/LaptopCouch"
+    }
+  >
+    <Button>
+      <div className="social-content">
+        {props.platform === "github" && <Icon.GithubIcon size={20} />}
+        {props.platform === "twitter" && <Icon.TwitterIcon size={20} />}
+        <span>{props.platform === "github" ? "Github" : "Twitter"}</span>
+      </div>
+      <style jsx>
+        {`
           .social-content {
             display: flex;
             align-items: center;
@@ -21,8 +29,9 @@ const SocialLink = (props: SocialLinkProps) => (
             margin-left: 10px;s
           }
         `}
-    </style>
-  </Button>
+      </style>
+    </Button>
+  </a>
 );
 
 export default SocialLink;
