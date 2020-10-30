@@ -29,5 +29,31 @@ export const Icons = () => (
     <IconWrap>
       <Icon.TwitterIcon size={80} />
     </IconWrap>
+    <IconWrap>
+      <Icon.WomanAvatar size={80} />
+    </IconWrap>
+  </>
+);
+
+export const FluidIcon = () => (
+  <>
+    <h4>big</h4>
+    <div className="big">
+      <Icon.WomanAvatar />
+    </div>
+    <h4>small</h4>
+    <div className="small">
+      <Icon.WomanAvatar />
+    </div>
+    <style jsx>
+      {`
+        .small {
+          width: 100px;
+        }
+        .big {
+          width: 300px;
+        }
+      `}
+    </style>
   </>
 );

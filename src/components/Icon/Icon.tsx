@@ -1,21 +1,26 @@
 import { maxHeaderSize } from "http";
 import React from "react";
+import { propTypes } from "react-bootstrap/esm/Image";
+import breakpoints from "../../breakpoints";
 import Github from "./github-logo.svg";
 import Twitter from "./twitter-logo.svg";
+import Woman from "./woman.svg";
 
 interface IconProps {
-  size: number;
+  size?: number;
 }
 const Icon = (props: IconProps & { icon: any }) => {
   return (
-    <div className="icon-container">
+    <div className={`icon-container ${props.size ? "predefined-size" : ""}`}>
       <props.icon />
       <style jsx>
         {`
           .icon-container {
+            display: flex;
+          }
+          .predefined-size {
             height: ${props.size}px;
             width: ${props.size}px;
-            display: flex;
           }
           .icon-container :global(svg) {
             width: 100%;
@@ -34,4 +39,8 @@ const TwitterIcon = (props: IconProps) => (
   <Icon icon={Twitter} size={props.size} />
 );
 
-export default { GithubIcon, TwitterIcon };
+const WomanAvatar = (props: IconProps) => (
+  <Icon icon={Woman} size={props.size}></Icon>
+);
+
+export default { GithubIcon, TwitterIcon, WomanAvatar };
