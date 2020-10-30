@@ -1,9 +1,18 @@
+@import "~bootstrap/scss/bootstrap-reboot.scss";
+@import "~bootstrap/scss/bootstrap.scss";
+
+
 body {
   padding: 0px;
 }
 
+html {
+  font-family: 'MetropolisRegular';
+  font-weight: normal;
+  font-style: normal;
+}
+
+
 $theme-colors: (
   "primary": #18bc9c,
 );
-@import "~bootstrap/scss/bootstrap-reboot.scss";
-@import "~bootstrap/scss/bootstrap.scss";
