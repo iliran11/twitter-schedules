@@ -1,4 +1,5 @@
 import Navbar from "react-bootstrap/Navbar";
+import Text from "../Text/Text";
 import SocialLink from "./SocialLink";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
@@ -8,9 +9,11 @@ import breakpoints from "../../breakpoints";
 const Header = () => {
   const socialPlatforms: ("github" | "twitter")[] = ["github", "twitter"];
   return (
-    <Navbar bg="light" expand="lg">
+    <Navbar bg="white" expand="lg">
       <Container>
-        <Navbar.Brand>When they tweet?</Navbar.Brand>
+        <Navbar.Brand>
+          <Text weight="bold">When they tweet?</Text>
+        </Navbar.Brand>
         <Navbar.Toggle />
         <Navbar.Collapse>
           <div className="main-content">
